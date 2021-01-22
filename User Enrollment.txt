@@ -1,0 +1,44 @@
+#BREAK
+
+pin = 1234
+
+userpin = int(input('Please enter pin number: '))
+while userpin != pin:
+    print ('Invalid pin!')
+    userpin = int(input('Please enter pin number again: '))
+    if userpin == pin:
+        break
+print ('Valid user')
+
+#CONTINUE
+
+pin = 1234
+userpin = int(input('Please enter pin number: '))
+while userpin != pin:
+    userpin = int(input('Please enter pin number: '))
+    if userpin == pin:
+        continue
+print ('Valid user')
+
+
+#AGEReq
+
+agereq = 18
+
+userage = int(input('Enter your age: '))
+while userage < agereq:
+    print ('Young to register')
+    userage = int(input('Enter your age: '))
+    if userage >= agereq:
+        continue
+name = input('Enter your name: ')
+while True:
+    ssn = input('Enter the last 4 digits of your SSN: ')
+    if len(ssn) > 4:       
+      print ('You did not enter 4 digits, Try again')
+    else:
+        if len(ssn) < 4:
+            print ('You did not enter 4 digits, Try again')
+        else:
+            print ('Thank you!')
+            break
